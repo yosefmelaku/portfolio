@@ -1,5 +1,4 @@
-import React from 'react';
-import JossiPhoto from '../Jossi.jpg';
+const JossiPhoto = new URL('../Jossi.jpg', import.meta.url).href;
 
 const Home: React.FC = () => {
   return (

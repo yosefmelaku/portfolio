@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+main {
+  min-height: calc(100vh - 160px); /* Account for header and footer */
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+a:hover {
+  opacity: 0.8;
+}

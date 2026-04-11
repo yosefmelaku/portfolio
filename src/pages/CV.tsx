@@ -77,11 +77,11 @@ const CV: React.FC = () => {
           <ul>
             <li>
               <span className="cv-icon">✉</span>
-              yosef@example.com
+              <a href="mailto:yosefmelaku9876@gmail.com">yosefmelaku9876@gmail.com</a>
             </li>
             <li>
               <span className="cv-icon">📞</span>
-              +251 9XX XXX XXX
+              <a href="tel:+251955765726">+251 955 765 726</a>
             </li>
             <li>
               <span className="cv-icon">🔗</span>

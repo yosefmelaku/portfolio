@@ -9,17 +9,17 @@ const Contact: React.FC = () => {
         <div className="contact-card">
           <div className="contact-item">
             <strong>Email</strong>
-            yosef@example.com
+            <a href="mailto:yosefmelaku9876@gmail.com">yosefmelaku9876@gmail.com</a>
+          </div>
+          <div className="contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+251955765726">+251 955 765 726</a>
           </div>
           <div className="contact-item">
             <strong>LinkedIn</strong>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
               linkedin.com/in/yourprofile
             </a>
-          </div>
-          <div className="contact-item">
-            <strong>Phone</strong>
-            +251 9XX XXX XXX
           </div>
         </div>
       </div>

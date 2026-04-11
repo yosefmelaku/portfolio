@@ -3,11 +3,11 @@ import React from 'react';
 const CV: React.FC = () => {
   const skills = [
     { name: 'JavaScript / TypeScript', level: 90 },
-    { name: 'React & Next.js',         level: 88 },
-    { name: 'Node.js / Express',       level: 80 },
-    { name: 'Python',                  level: 75 },
-    { name: 'SQL & PostgreSQL',        level: 72 },
-    { name: 'Docker / AWS',            level: 65 },
+    { name: 'React & Next.js', level: 88 },
+    { name: 'Node.js / Express', level: 80 },
+    { name: 'Python', level: 75 },
+    { name: 'SQL & PostgreSQL', level: 72 },
+    { name: 'Docker / AWS', level: 65 },
   ];
 
   const experience = [
@@ -51,7 +51,7 @@ const CV: React.FC = () => {
   ];
 
   const languages = ['English (Fluent)', 'Amharic (Native)'];
-  const interests  = ['Open-source', 'Hackathons', 'Machine Learning', 'UI/UX Design'];
+  const interests = ['Open-source', 'Hackathons', 'Machine Learning', 'UI/UX Design'];
 
   return (
     <div className="cv-page">
@@ -62,7 +62,7 @@ const CV: React.FC = () => {
         </div>
 
         <h1 className="cv-sidebar-name">Yosef Melaku</h1>
-        <p  className="cv-sidebar-title">Computer Science Student</p>
+        <p className="cv-sidebar-title">Computer Science Student</p>
 
         <a
           href="/cv.pdf"

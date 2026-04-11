@@ -6,7 +6,7 @@ const About: React.FC = () => {
       <div className="container">
         <h1>About Me</h1>
         <p>
-          Hello! I'm a passionate Computer Science student with a keen interest in software development,
+          Hello! I'm a Computer Science student with a keen interest in software development,
           web technologies, and problem-solving. I enjoy building innovative solutions and learning new
           technologies. Currently pursuing my degree in Computer Science, I have experience in various
           programming languages and frameworks.

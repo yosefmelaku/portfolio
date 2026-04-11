@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const JossiPhoto = new URL('../Jossi.jpg', import.meta.url).href;
 
@@ -12,23 +13,29 @@ const Home: React.FC = () => {
             <img src={JossiPhoto} alt="Yosef Melaku" />
           </div>
           <h1 className="hero-name">Yosef Melaku</h1>
-          <p className="hero-role">Computer Science Student</p>
+          <p className="hero-role">CS Student · Web Dev · Data Science</p>
+          <p className="hero-uni">Bahir Dar University</p>
         </div>
 
-        {/* Right column */}
         <div className="hero-right">
-          <h2>About Me</h2>
           <p>
-            Hello! I'm a passionate Computer Science student with a keen interest in software development,
-            web technologies, and problem-solving. I enjoy building innovative solutions and learning new
-            technologies. Currently pursuing my degree in Computer Science, I have experience in various
-            programming languages and frameworks.
+            I'm a motivated Computer Science student at Bahir Dar University with experience
+            in web development and data science. I enjoy building projects, working with data,
+            and learning new tools that help solve real-world problems.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new tech trends, contributing to open-source
-            projects, or participating in hackathons. I'm always eager to take on new challenges and
-            collaborate with like-minded individuals.
+            I'm looking for an opportunity to gain practical experience and grow as a developer
+            while contributing to a team.
           </p>
+
+          {/* Tech stack pills */}
+          <div className="hero-stack">
+            {['HTML','CSS','JavaScript','PHP','React','Data Analysis'].map(t => (
+              <span key={t} className="hero-stack-pill">{t}</span>
+            ))}
+          </div>
+
+          <Link to="/about" className="hero-cta">Read more about me →</Link>
         </div>
       </div>
     </section>

@@ -15,15 +15,15 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <main style={{ paddingTop: '80px' }}> {/* Account for fixed header */}
+        <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/"           element={<Home />}       />
+            <Route path="/about"      element={<About />}      />
+            <Route path="/skills"     element={<Skills />}     />
+            <Route path="/projects"   element={<Projects />}   />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/cv"         element={<CV />}         />
+            <Route path="/contact"    element={<Contact />}    />
           </Routes>
         </main>
         <Footer />

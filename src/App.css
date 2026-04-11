@@ -1,21 +1,14 @@
 .App {
-  text-align: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  min-height: calc(100vh - 160px); /* Account for header and footer */
+  flex: 1;
+  padding-top: var(--header-h);
 }
 
 h1, h2, h3 {
   margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-a:hover {
-  opacity: 0.8;
 }

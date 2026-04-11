@@ -1,36 +1,69 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const navLinks = [
+  { to: '/',           label: 'Home'       },
+  { to: '/about',      label: 'About'      },
+  { to: '/skills',     label: 'Skills'     },
+  { to: '/projects',   label: 'Projects'   },
+  { to: '/experience', label: 'Experience' },
+  { to: '/cv',         label: 'CV'         },
+  { to: '/contact',    label: 'Contact'    },
+];
 
 const Header: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const close = () => setOpen(false);
+
   return (
-    <header style={{
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      color: 'white',
-      padding: '1rem',
-      position: 'fixed',
-      top: 0,
-      width: '100%',
-      zIndex: 1000
-    }}>
-      <nav>
-        <ul style={{
-          listStyle: 'none',
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '2rem',
-          margin: 0,
-          padding: 0
-        }}>
-          <li><Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Home</Link></li>
-          <li><Link to="/about" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>About</Link></li>
-          <li><Link to="/skills" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Skills</Link></li>
-          <li><Link to="/projects" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Projects</Link></li>
-          <li><Link to="/experience" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Experience</Link></li>
-          <li><Link to="/cv" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>CV</Link></li>
-          <li><Link to="/contact" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Contact</Link></li>
+    <>
+      <header className="site-header">
+        <div className="nav-inner">
+          <span className="nav-brand">Yosef Melaku</span>
+
+          {/* Desktop links */}
+          <nav>
+            <ul className="nav-links">
+              {navLinks.map(({ to, label }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
+                    className={location.pathname === to ? 'active' : ''}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Hamburger */}
+          <button
+            className={`nav-hamburger${open ? ' open' : ''}`}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen(o => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile drawer */}
+      <div className={`nav-drawer${open ? ' open' : ''}`} aria-hidden={!open}>
+        <ul>
+          {navLinks.map(({ to, label }) => (
+            <li key={to}>
+              <Link to={to} onClick={close}>{label}</Link>
+            </li>
+          ))}
         </ul>
-      </nav>
-    </header>
+      </div>
+    </>
   );
 };
 

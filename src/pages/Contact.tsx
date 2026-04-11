@@ -2,29 +2,28 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <div style={{
-      padding: '4rem 2rem',
-      maxWidth: '600px',
-      margin: '0 auto',
-      background: '#fff',
-      minHeight: '80vh',
-      borderRadius: '8px',
-      color: '#333'
-    }}>
-      <h1>Contact</h1>
-      <p>Feel free to reach out to me for opportunities, collaborations, or just to say hello!</p>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-        <div>
-          <strong>Email:</strong> your.email@example.com
-        </div>
-        <div>
-          <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" style={{ color: '#0077b5' }}>linkedin.com/in/yourprofile</a>
-        </div>
-        <div>
-          <strong>Phone:</strong> (123) 456-7890
+    <section className="page-section contact-section">
+      <div className="container">
+        <h1>Contact</h1>
+        <p>Feel free to reach out for opportunities, collaborations, or just to say hello!</p>
+        <div className="contact-card">
+          <div className="contact-item">
+            <strong>Email</strong>
+            yosef@example.com
+          </div>
+          <div className="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
+              linkedin.com/in/yourprofile
+            </a>
+          </div>
+          <div className="contact-item">
+            <strong>Phone</strong>
+            +251 9XX XXX XXX
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

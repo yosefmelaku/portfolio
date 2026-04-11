@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer style={{ backgroundColor: '#333', color: 'white', padding: '1rem', textAlign: 'center' }}>
-      <p>&copy; 2024 Yosef Melaku. All rights reserved.</p>
+    <footer className="site-footer">
+      <p>© 2025 Yosef Melaku. All rights reserved.</p>
     </footer>
   );
 };
